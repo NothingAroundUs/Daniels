@@ -1,0 +1,259 @@
+.section-title {
+    text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-decoration-color: rgba(230, 230, 230, 1);
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    padding-top: 4em;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero .inner-header {
+    position: absolute;
+    z-index: 2;
+}
+
+.hero h3, .hero h1 {
+    font-weight: normal;
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+#animated-text {
+    font-weight: 300;
+    border-right: 0.15em solid white;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+.typing-animation {
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#navbar-example {
+    z-index: 3000;
+}
+
+#navbar-example .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-link {
+    color: #fff;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.navbar-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+
+.navbar-link:hover::after, .navbar-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-white-bg .navbar-link::after {
+    background-color: #000;
+}
+
+.h-links a {
+    font-size: 10px;
+    color: white !important;
+    padding: 10px;
+}
+
+.hover-btn-dark:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.hover-btn-light:hover {
+    background-color: rgb(30 33 37) !important;
+    color: #fff !important;
+}
+
+.testimonial {
+    background-color: #f3f3f3;
+}
+
+.overlay {
+    background-color: rgba(243, 243, 243, 0.5) !important;
+}
+
+.custom-indicators {
+    bottom: -30px;
+}
+
+.custom-indicators button {
+    max-width: 10px;
+    max-height: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 50%;
+
+    background-color: rgb(208, 208, 208) !important;
+}
+
+.custom-indicators .active {
+    background-color: rgb(122 141 134) !important;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item .overlay {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    background-color: #fff !important;
+    --bs-bg-opacity: 1 !important;
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+    --bs-bg-opacity: 1 !important;
+}
+
+.portofilio-icon-hover:hover {
+    background-color: transparent !important;
+    border: 1px solid;
+    color: #000 !important;
+}
+
+.team-member:hover img {
+    transform: scale(1.2);
+}
+
+.team-member img {
+    transition: 0.7s;
+    overflow: hidden !important;
+}
+
+.thumbnail i:hover {
+    opacity: 1 !important;
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+.thumbnail i {
+    padding: 10px;
+    transition: 1s;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.row-padding {
+    padding-left: 70px;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail .overlay {
+    background-color: rgba(255, 255, 255, .9) !important;
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 180deg) scale(0.5);
+    transform-origin: center;
+    transition: .3s ease-in-out;
+    margin: 10px 10px;
+}
+
+.team-member:hover .thumbnail .overlay {
+    opacity: 1;
+    transform: rotate3d(0, 1, 0, 360deg) scale(1);
+}
+
+.service-card .service-icon {
+    transition: .5s;
+    padding: 15px;
+    background-color: rgb(242 242 242) !important;
+}
+
+.service-card:hover .service-icon {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.contact-icon {
+    padding: 7px;
+    background-color: #f3f3f3;
+    transition: .5s;
+}
+
+.contact-info-col:hover .contact-icon {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.contact-form form input:focus, .contact-form form textarea:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent;
+}
+
+/* Custom bootstrap classes */
+
+.bg-opacity-100 {
+    --bs-bg-opacity: 1;
+}
+
+.bg-opacity-85 {
+    /* Extra for nav bar */
+    --bs-bg-opacity: .85;
+}
+
+.bg-opacity-75 {
+    --bs-bg-opacity: .75;
+}
+
+.bg-opacity-50 {
+    --bs-bg-opacity: .50;
+}
+
+.bg-opacity-25 {
+    --bs-bg-opacity: .25;
+}
+
+.bg-opacity-10 {
+    --bs-bg-opacity: .10;
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
