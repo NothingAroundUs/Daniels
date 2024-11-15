@@ -1,5 +1,5 @@
 
-![Logo](img/favicon.png)
+![Logo](img/favicon.ico)
 # Danials
 
 A responsive bootstrap portoflio for developers
